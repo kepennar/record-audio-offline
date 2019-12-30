@@ -1,20 +1,27 @@
 name: CI
 
 on:
-  push:	
-    branches:	
+  push:
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-    - name: Build and Deploy
-      run: |
-        yarn
-        yarn build
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+      - name: Build
+        run: |
+          yarn
+          yarn build
+      - name: Deploy
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
