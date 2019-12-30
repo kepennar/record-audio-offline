@@ -5,6 +5,8 @@ import { visualize } from "./visualizer";
 
 import "./styles.css";
 
+window.MediaRecorder = require('audio-recorder-polyfill')
+
 localforage.config({
   driver: localforage.INDEXEDDB,
   name: "KeKe POC",
@@ -16,13 +18,16 @@ localforage.config({
 let shouldStop = false;
 let started = false;
 
+
+
 const onClickButton = () => {
   if (started) {
     shouldStop = true;
   } else {
     navigator.mediaDevices
       .getUserMedia({ audio: true, video: false })
-      .then(handleSuccess);
+      .then(handleSuccess)
+      .catch(function(err) { console.log(err); });
   }
 };
 
