@@ -13,7 +13,6 @@ export function renderApp({
   downloadSound,
   audios
 }: AppState) {
-  ``;
   const audioItems = audios.map(
     audio =>
       html`

@@ -780,6 +780,11 @@
   resolved "https://registry.yarnpkg.com/@types/dom-mediacapture-record/-/dom-mediacapture-record-1.0.2.tgz#1b4c30836a5f94357c8f37bbb0bc0d71d8ce5c27"
   integrity sha512-kvpfcIq+YnOPnXxzTx6hbStJin0jtcFgCQxn4XgumF11HrOICxddPJ0/oGBLOd0mauxpPvxBuVvBi1qf7NC7Fg==
 
+"@types/node@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.1.tgz#6d11a8c2d58405b3db9388ab740106cbfa64c3c9"
+  integrity sha512-hx6zWtudh3Arsbl3cXay+JnkvVgCKzCWKv42C9J01N2T2np4h8w5X8u6Tpz5mj38kE3M9FM0Pazx8vKFFMnjLQ==
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"

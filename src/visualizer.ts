@@ -8,8 +8,7 @@ export function visualize(canvas: HTMLCanvasElement, stream) {
   canvas.height = HEIGHT;
 
   if (!audioCtx) {
-    let AudioContext = window.AudioContext || window.webkitAudioContext;
-    audioCtx = new AudioContext();
+    audioCtx = new window.AudioContext();
   }
 
   const source = audioCtx.createMediaStreamSource(stream);
