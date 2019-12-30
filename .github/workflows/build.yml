@@ -15,5 +15,6 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
     - name: Build and Deploy
-    - run: yarn
-    - run: yarn build
+      run: |
+        yarn
+        yarn build
